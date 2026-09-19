@@ -1,7 +1,8 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
+use Illuminate\Http\Client\PendingRequest;
 use Illuminate\Support\Facades\Http;
 use RuntimeException;
 
@@ -50,7 +51,7 @@ class PostmanApi
         return $response->json('collection.name') ?? 'collection';
     }
 
-    private function request(): \Illuminate\Http\Client\PendingRequest
+    private function request(): PendingRequest
     {
         if (!$this->configured()) {
             throw new RuntimeException('Set POSTMAN_API_KEY and POSTMAN_COLLECTION_UID first.');

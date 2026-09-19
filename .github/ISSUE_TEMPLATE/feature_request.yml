@@ -1,0 +1,19 @@
+name: Feature request
+description: Something the package could do
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What you are trying to do, and where the package gets in the way.
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: What you have in mind
+      description: >
+        Bear in mind that the sync is one way, code to Postman, and that a run must never
+        destroy work the routes do not describe.

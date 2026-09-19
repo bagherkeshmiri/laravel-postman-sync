@@ -1,6 +1,6 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
 /**
  * Both sides of the sync have to be compared on the same footing: a Laravel uri

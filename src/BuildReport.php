@@ -1,6 +1,6 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
 class BuildReport
 {

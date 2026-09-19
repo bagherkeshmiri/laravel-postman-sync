@@ -1,0 +1,32 @@
+name: Bug report
+description: Something the package does that it should not, or does not do that it should
+labels: [bug]
+body:
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: What you expected, and what you got instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: route
+    attributes:
+      label: The route and its validation
+      description: The route definition and the FormRequest or inline validate() behind it.
+      render: php
+
+  - type: textarea
+    id: output
+    attributes:
+      label: Output of `php artisan postman:build --dry-run`
+      render: shell
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: package 1.0.0, Laravel 12.3, PHP 8.3
+    validations:
+      required: true

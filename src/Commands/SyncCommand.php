@@ -1,10 +1,10 @@
 <?php
 
-namespace TopMenu\PostmanSync\Commands;
+namespace BagherKeshmiri\PostmanSync\Commands;
 
+use BagherKeshmiri\PostmanSync\PostmanApi;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Command\Command as CommandAlias;
-use TopMenu\PostmanSync\PostmanApi;
 
 class SyncCommand extends Command
 {

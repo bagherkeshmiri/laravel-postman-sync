@@ -1,6 +1,6 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
 use RuntimeException;
 
@@ -41,6 +41,7 @@ class CollectionFile
         foreach ($items as $item) {
             if (isset($item['item'])) {
                 $out = array_merge($out, self::requests($item['item']));
+
                 continue;
             }
 

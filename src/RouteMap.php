@@ -1,6 +1,6 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Routing\Route;

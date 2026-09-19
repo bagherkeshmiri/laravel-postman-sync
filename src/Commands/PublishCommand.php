@@ -1,14 +1,14 @@
 <?php
 
-namespace TopMenu\PostmanSync\Commands;
+namespace BagherKeshmiri\PostmanSync\Commands;
 
+use BagherKeshmiri\PostmanSync\CollectionFile;
+use BagherKeshmiri\PostmanSync\PostmanApi;
+use BagherKeshmiri\PostmanSync\RouteMap;
+use BagherKeshmiri\PostmanSync\Shape;
 use Illuminate\Console\Command;
 use Symfony\Component\Console\Command\Command as CommandAlias;
 use Throwable;
-use TopMenu\PostmanSync\CollectionFile;
-use TopMenu\PostmanSync\PostmanApi;
-use TopMenu\PostmanSync\RouteMap;
-use TopMenu\PostmanSync\Shape;
 
 class PublishCommand extends Command
 {

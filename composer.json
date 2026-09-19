@@ -1,9 +1,21 @@
 {
-    "name": "topmenu/laravel-postman-sync",
+    "name": "bagherkeshmiri/laravel-postman-sync",
     "description": "Build a Postman collection from your Laravel routes and publish it to a Postman workspace",
-    "keywords": ["laravel", "postman", "api", "documentation"],
+    "keywords": ["laravel", "postman", "api", "documentation", "collection", "artisan", "form-request"],
+    "homepage": "https://github.com/bagherkeshmiri/laravel-postman-sync",
     "type": "library",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Bagher Keshmiri",
+            "homepage": "https://github.com/bagherkeshmiri",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/bagherkeshmiri/laravel-postman-sync/issues",
+        "source": "https://github.com/bagherkeshmiri/laravel-postman-sync"
+    },
     "require": {
         "php": "^8.2",
         "illuminate/console": "^10.0|^11.0|^12.0|^13.0",
@@ -11,17 +23,32 @@
         "illuminate/routing": "^10.0|^11.0|^12.0|^13.0",
         "illuminate/support": "^10.0|^11.0|^12.0|^13.0"
     },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^8.0|^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
     "autoload": {
         "psr-4": {
-            "TopMenu\\PostmanSync\\": "src/"
+            "BagherKeshmiri\\PostmanSync\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BagherKeshmiri\\PostmanSync\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "TopMenu\\PostmanSync\\PostmanSyncServiceProvider"
+                "BagherKeshmiri\\PostmanSync\\PostmanSyncServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "format": "vendor/bin/pint",
+        "lint": "vendor/bin/pint --test"
     },
     "config": {
         "sort-packages": true

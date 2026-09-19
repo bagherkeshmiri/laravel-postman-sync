@@ -1,6 +1,6 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
 /**
  * Rewrites a collection so it matches the application: the routes decide which
@@ -20,8 +20,8 @@ class CollectionBuilder
     }
 
     /**
-     * @param array<string, string> $endpoints shape key => route uri
-     * @param array<string, array> $rules shape key => validated fields
+     * @param  array<string, string>  $endpoints  shape key => route uri
+     * @param  array<string, array>  $rules  shape key => validated fields
      */
     public function build(array $collection, array $endpoints, array $rules, BuildReport $report): array
     {
@@ -49,6 +49,7 @@ class CollectionBuilder
                 if ($item['item'] !== []) {
                     $out[] = $item;
                 }
+
                 continue;
             }
 
@@ -57,6 +58,7 @@ class CollectionBuilder
             if (isset($endpoints[$key])) {
                 $report->kept[$key] = $folder;
                 $out[] = $item;
+
                 continue;
             }
 
@@ -211,6 +213,7 @@ class CollectionBuilder
         foreach ($items as &$item) {
             if (isset($item['item'])) {
                 $item['item'] = $this->fill($item['item'], $rules, $report);
+
                 continue;
             }
 
@@ -222,6 +225,7 @@ class CollectionBuilder
 
             if (strtoupper($item['request']['method'] ?? 'GET') === 'GET') {
                 $this->fillQuery($item, $fields, $report);
+
                 continue;
             }
 
@@ -337,6 +341,7 @@ class CollectionBuilder
                     }
 
                     $ref = &$ref[0];
+
                     continue;
                 }
 

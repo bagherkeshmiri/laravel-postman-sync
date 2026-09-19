@@ -1,12 +1,12 @@
 <?php
 
-namespace TopMenu\PostmanSync;
+namespace BagherKeshmiri\PostmanSync;
 
+use BagherKeshmiri\PostmanSync\Commands\BuildCommand;
+use BagherKeshmiri\PostmanSync\Commands\CollectionsCommand;
+use BagherKeshmiri\PostmanSync\Commands\PublishCommand;
+use BagherKeshmiri\PostmanSync\Commands\SyncCommand;
 use Illuminate\Support\ServiceProvider;
-use TopMenu\PostmanSync\Commands\BuildCommand;
-use TopMenu\PostmanSync\Commands\CollectionsCommand;
-use TopMenu\PostmanSync\Commands\PublishCommand;
-use TopMenu\PostmanSync\Commands\SyncCommand;
 
 class PostmanSyncServiceProvider extends ServiceProvider
 {
